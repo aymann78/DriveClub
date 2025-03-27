@@ -1,718 +1,923 @@
+/* Base variables using Bootstrap compatible colors */
 :root {
-    --primary-color: #e63946;
-    --secondary-color: #1d3557;
-    --dark-color: #0d1b2a;
-    --light-color: #f1faee;
-    --accent-color: #ffd166;
-    --gray-100: #f8f9fa;
-    --gray-200: #e9ecef;
-    --gray-300: #dee2e6;
-    --gray-400: #ced4da;
-    --gray-500: #adb5bd;
-    --gray-600: #6c757d;
-    --gray-700: #495057;
-    --gray-800: #343a40;
-    --gray-900: #212529;
-    --transition: all 0.3s ease;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --primary-color: #e63946;
+  --secondary-color: #1d3557;
+  --dark-color: #0d1b2a;
+  --light-color: #f1faee;
+  --accent-color: #ffd166;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --transition: all 0.3s ease;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset and base styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background-color: var(--gray-100);
+}
+
+/* Buttons customization */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #c5323e;
+  border-color: #c5323e;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-secondary {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* NavBar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  padding: 0.75rem 0;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.navbar .nav-link {
+  color: var(--gray-700);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary-color);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.navbar .nav-link:hover:after,
+.navbar .nav-link.active:after {
+  width: 100%;
+}
+
+/* Responsive Auth Buttons */
+.auth-buttons {
+  margin-left: auto;
+}
+
+@media (max-width: 991px) {
+  .auth-buttons {
+    margin-top: 1rem;
+    width: 100%;
   }
+}
+
+/* Agregado estilos específicos para el botón hamburguesa */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnQlMjBjYXJ8ZW58MHx8MHx8&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 100px;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--gray-100);
+  border-radius: 8px;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.feature-card p {
+  color: var(--gray-600);
+}
+
+/* Plans Section */
+.plans-section {
+  padding: 80px 0;
+  background-color: var(--gray-100);
+}
+
+.plan-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  padding: 30px;
+  height: 100%;
+}
+
+.plan-card.featured {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--primary-color);
+  padding-top: 50px; /* More padding at the top for the tag */
+}
+
+.plan-tag {
+  position: absolute;
+  top: 5px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.plan-header h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+}
+
+.plan-price .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.plan-price .period {
+  font-size: 1rem;
+  color: var(--gray-600);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.plan-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+/* Vehicle Badge Styles */
+.plan-badge, .vehicle-plan {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.plan-basic, .plan-badge.plan-basic, .vehicle-plan.plan-basic {
+  background-color: #4361ee;
+}
+
+.plan-premium, .plan-badge.plan-premium, .vehicle-plan.plan-premium {
+  background-color: #3a0ca3;
+}
+
+.plan-elite, .plan-badge.plan-elite, .vehicle-plan.plan-elite {
+  background-color: #7209b7;
+}
+
+/* Showcase Section */
+.showcase-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.showcase-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  height: 300px;
+}
+
+.showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+}
+
+.card-overlay h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.card-overlay p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--secondary-color) !important;
+  color: white;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: var(--primary-color);
+}
+
+.footer-links h3, .footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--gray-400);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+  color: var(--gray-400);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-link {
+  color: var(--gray-400);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  color: white;
+}
+
+/* Vehicles Page Styles */
+.filter-section {
+  padding-top: 90px !important; /* Extra padding to account for fixed navbar */
+}
+
+.vehicle-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.vehicle-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vehicle-card:hover .vehicle-image img {
+  transform: scale(1.1);
+}
+
+.vehicle-plan {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.vehicle-details {
+  padding: 20px;
+}
+
+.vehicle-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+}
+
+.vehicle-category {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.vehicle-specs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spec-value {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.spec-label {
+  color: var(--gray-600);
+  font-size: 0.8rem;
+}
+
+.vehicle-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.price span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray-600);
+}
+
+/* Vehicle Detail Page */
+/* =======================================
+   Overwrite de la sección de pestañas
+   ======================================= */
+
+   .vehicle-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1611651338412-8403fa6e3599?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position:center;
+    padding: 150px 0 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
   }
+
+  .py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+}
   
-  body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: var(--gray-800);
-    background-color: var(--gray-100);
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    position: fixed;
+  .vehicle-hero:before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
   }
   
-  .navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-  }
-  
-  .logo a {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
-  
-  .logo span {
-    color: var(--primary-color);
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-links li a {
-    margin: 0 15px;
-    color: var(--gray-700);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
+  .vehicle-hero-content {
     position: relative;
+    z-index: 2;
   }
   
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: var(--primary-color);
+  div.spec-icon {
+    color:var(--primary-color);
   }
-  
-  .nav-links li a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
+  .vehicle-category {
+    display: inline-block;
     background-color: var(--primary-color);
-    transition: var(--transition);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
   }
   
-  .nav-links li a:hover:after,
-  .nav-links li a.active:after {
+  .vehicle-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+   .vehicle-tabs .nav-tabs {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;  /* No se parten en 2 líneas en escritorio */
+    gap: 0;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: none !important;
+  }
+  
+  .vehicle-tabs .nav-item {
+    flex: 1;  /* Cada pestaña ocupa el mismo espacio horizontal */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .vehicle-tabs .nav-link {
+    width: 100%;
+    padding: 15px !important;
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se parta */
+    transition: var(--transition);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray-700) !important;
+    cursor: pointer;
+  }
+  
+  /* Hover para botones inactivos */
+  .vehicle-tabs .nav-link:hover {
+    background-color: var(--gray-200) !important;
+  }
+  
+  /* Botón activo */
+  .vehicle-tabs .nav-link.active {
+    background-color: #fff !important;
+    color: var(--secondary-color) !important;
+    border-bottom: 3px solid var(--primary-color) !important;
+  }
+  
+  /* =======================================
+     Versión en columna para pantallas pequeñas
+     ======================================= */
+  @media (max-width: 768px) {
+    .vehicle-tabs .nav-tabs {
+      flex-direction: column !important; /* Se apilan en columna */
+      align-items: stretch !important;   /* Cada pestaña ocupa el ancho */
+    }
+  
+    .vehicle-tabs .nav-item {
+      flex: 0 0 auto; /* Ocupar el espacio según su contenido */
+      width: 100%;
+    }
+  
+    .vehicle-tabs .nav-link {
+      width: 100% !important;   /* Que el botón ocupe todo el ancho */
+      text-align: center !important;
+      /* Puedes añadir un margin-bottom si quieres separar visualmente 
+         cada pestaña. Ejemplo:
+         margin-bottom: 1px;
+      */
+    }
+  }
+  
+  
+
+
+
+
+/* Responsive Styles */
+/* Estilos específicos para tablets y pantallas medias (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse {
+    padding: 10px 0;
+  }
+  
+  .navbar-nav {
+    margin-left: 0 !important;
+    margin-top: 10px;
   }
   
   .auth-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: var(--transition);
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .btn-large {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-  }
-  
-  .btn-sm {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  
-  .btn-full {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    justify-content: flex-start;
     width: 100%;
-    display: block;
   }
   
-  .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
+  .auth-buttons a {
+    margin-right: 10px;
   }
-  
-  .btn-primary:hover {
-    background-color: #c5323e;
-    transform: translateY(-2px);
-  }
-  
-  .btn-outline {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: translateY(-2px);
-  }
-  
-  .btn-outline.cancel, .btn-outline.danger {
-    color: #e63946;
-    border-color: #e63946;
-  }
-  
-  .btn-outline.cancel:hover, .btn-outline.danger:hover {
-    background-color: #e63946;
-    color: white;
-  }
-  
-  .btn-light {
-    color: white;
-    border-color: white;
-  }
-  
-  .btn-light:hover {
-    background-color: white;
-    color: var(--secondary-color);
-  }
-  
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--secondary-color);
-    margin: 2px 0;
-    transition: var(--transition);
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3BvcnQlMjBjYXJ8ZW58MHx8MHx8&w=1000&q=80');
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0 100px;
-    color: white;
-    text-align: center;
-  }
-  
+}
+
+/* Estilos para móviles y pantallas pequeñas */
+@media (max-width: 768px) {
   .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeInDown 1s ease;
-  }
-  
-  .hero-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    animation: fadeInUp 1s ease;
+    font-size: 2rem;
   }
   
   .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    animation: fadeInUp 1.2s ease;
-  }
-  
-  /* Filter Section */
-  .filter-section {
-    background-color: white;
-    padding: 30px 0;
-    box-shadow: var(--shadow);
-  }
-  
-  .filters {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .filter-group {
-    display: flex;
     flex-direction: column;
-    min-width: 200px;
-  }
-  
-  .filter-group label {
-    font-weight: 500;
-    margin-bottom: 5px;
-    color: var(--gray-700);
-  }
-  
-  .filter-group select {
-    padding: 10px;
-    border: 1px solid var(--gray-300);
-    border-radius: 4px;
-    font-family: inherit;
-    color: var(--gray-800);
-    background-color: white;
-    cursor: pointer;
-  }
-  
-  /* Vehicles Section */
-  .vehicles-section {
-    padding: 60px 0;
-  }
-  
-  .vehicles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .vehicle-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-  }
-  
-  .vehicle-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .vehicle-image {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .vehicle-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .vehicle-card:hover .vehicle-image img {
-    transform: scale(1.1);
-  }
-  
-  .vehicle-plan {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-  }
-  
-  .plan-basic {
-    background-color: #4361ee;
-  }
-  
-  .plan-premium {
-    background-color: #3a0ca3;
-  }
-  
-  .plan-elite {
-    background-color: #7209b7;
-  }
-  
-  .vehicle-details {
-    padding: 20px;
-  }
-  
-  .vehicle-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: var(--secondary-color);
-  }
-  
-  .vehicle-category {
-    color: var(--gray-600);
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .vehicle-specs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-  }
-  
-  .spec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .spec-value {
-    font-weight: 600;
-    color: var(--gray-800);
-  }
-  
-  .spec-label {
-    color: var(--gray-600);
-    font-size: 0.8rem;
-  }
-  
-  .vehicle-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-  }
-  
-  .price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary-color);
-  }
-  
-  .price span {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--gray-600);
-  }
-  
-  .btn-reserve {
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  
-  .btn-reserve:hover {
-    background-color: var(--primary-color);
-  }
-  
-  /* Section Titles */
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--secondary-color);
-    position: relative;
-    padding-bottom: 15px;
-  }
-  
-  .section-title:after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 3px;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  /* Features Section */
-  .features-section {
-    padding: 80px 0;
-    background-color: white;
-  }
-  
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-  }
-  
-  .feature-card {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--gray-100);
-    border-radius: 8px;
-    transition: var(--transition);
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow);
-  }
-  
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .feature-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-  }
-  
-  .feature-card p {
-    color: var(--gray-600);
-  }
-  
-  /* Plans Section */
-  .plans-section {
-    padding: 80px 0;
-    background-color: var(--gray-100);
-  }
-  
-  .plans-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .plan-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    position: relative;
-    padding: 30px;
+    gap: 10px;
   }
   
   .plan-card.featured {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
-    border: 2px solid var(--primary-color);
+    transform: none;
   }
   
-  .plan-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 20px;
-    font-weight: 600;
+  .vehicle-specs {
+    flex-wrap: wrap;
   }
   
-  .plan-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .plan-header h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+  .spec {
+    flex: 0 0 33.333%;
     margin-bottom: 10px;
   }
   
-  .plan-price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+  /* Fix the hero section to remove space between nav and hero */
+  .hero-section {
+    margin-top: 0;
+    padding-top: 100px;
   }
   
-  .plan-price .period {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--gray-600);
+  /* Ensure cards stack properly on mobile */
+  .feature-card, .plan-card, .showcase-card {
+    height: auto;
+    margin-bottom: 20px;
   }
   
-  .plan-features {
-    list-style: none;
-    margin-bottom: 30px;
+  /* Mejorar la alineación del menú móvil */
+  .navbar-collapse {
+    padding: 15px 0;
+    text-align: center;
   }
   
-  .plan-features li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--gray-200);
-    color: var(--gray-700);
-  }
-  
-  .plan-features li:last-child {
-    border-bottom: none;
-  }
-  
-  .plan-features li:before {
-    content: '✓';
-    color: var(--primary-color);
-    margin-right: 10px;
-    font-weight: bold;
-  }
-  
-  /* Showcase Section */
-  .showcase-section {
-    padding: 80px 0;
-    background-color: white;
-  }
-  
-  .showcase-slider {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-  }
-  
-  .showcase-card {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .navbar-nav {
+    margin-left: 0 !important;
+    padding-left: 0;
     width: 100%;
-    height: 100%;
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 5px 0;
+  }
+  
+  .auth-buttons {
+    padding: 15px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
     opacity: 0;
-    transition: opacity 1s ease;
+    transform: translateY(-20px);
   }
-  
-  .showcase-card.active {
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
-  
-  .showcase-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: white;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .card-overlay h3 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-  }
-  
-  .card-overlay p {
-    margin-bottom: 15px;
-    opacity: 0.8;
-  }
-  
-  /* CTA Section */
-  .cta-section {
-    padding: 80px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-  }
-  
-  .cta-content {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: var(--secondary-color);
-    color: var(--gray-200);
-    padding: 60px 0 20px;
-  }
-  
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  
-  .footer-logo h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .footer-logo span {
-    color: var(--primary-color);
-  }
-  
-  .footer-links h3,
-  .footer-contact h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  
-  .footer-links h3:after,
-  .footer-contact h3:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-    background-color: var(--primary-color);
-  }
-  
-  .footer-links ul {
-    list-style: none;
-  }
-  
-  .footer-links ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links ul li a {
-    color: var(--gray-400);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-  
-  .footer-links ul li a:hover {
-    color: var(--primary-color);
-    margin-left: 5px;
-  }
-  
-  .footer-contact p {
-    margin-bottom: 10px;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .social-link {
-    color: var(--gray-400);
-    text-decoration: none;
-    transition: var(--transition);
-  }
-  
-  .social-link:hover {
-    color: var(--primary-color);
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
+}
+
+.appear {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Make sure content doesn't overlap with fixed navbar */
+main {
+  padding-top: 60px;
+}
+
+main.vehicle-main {
+  padding-top: 38px;
+}
+
+/* Fix for subscription section in vehicle.html */
+.reservation-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.plan-info {
+  margin-bottom: 15px;
+}
+
+.included-with {
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Important: Fix for the plan badge color contrast issue */
+.plan-badge {
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.subscription-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.subscription-note a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.subscription-note a:hover {
+  text-decoration: underline;
+}
+
+/* Auth pages (login/register) styles */
+.auth-section {
+  min-height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+}
+
+.auth-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.divider:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.divider span {
+  position: relative;
+  background-color: white;
+  padding: 0 15px;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.social-login .btn {
+  transition: all 0.2s ease;
+}
+
+.social-login .btn:hover {
+  transform: translateY(-2px);
+}
+
   /* Dashboard */
   .dashboard-main {
     padding-top: 80px;
@@ -777,7 +982,7 @@
     padding: 15px;
     font-size: 1rem;
     font-weight: 500;
-    color: var(--gray-700);
+    color: var(--primary-color);
     cursor: pointer;
     transition: var(--transition);
   }
@@ -1094,385 +1299,5 @@
   .notification-option input[type="checkbox"] {
     width: 18px;
     height: 18px;
-  }
-  
-  /* Vehicle Detail */
-  .vehicle-hero {
-    background-color: var(--secondary-color);
-    padding: 150px 0 50px;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .vehicle-hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-    z-index: 1;
-  }
-  
-  .vehicle-hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .vehicle-category {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .vehicle-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .vehicle-plan-badge {
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  
-  .vehicle-detail-section {
-    padding: 60px 0;
-  }
-  
-  .vehicle-detail-grid {
-    display: grid;
-    grid-template-columns: 6fr 4fr;
-    gap: 40px;
-  }
-  
-  .vehicle-gallery {
-    margin-bottom: 30px;
-  }
-  
-  .main-image {
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 10px;
-  }
-  
-  .main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .thumbnail-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  .thumbnail {
-    width: 100%;
-    height: 80px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: var(--transition);
-  }
-  
-  .thumbnail:hover, .thumbnail.active {
-    opacity: 1;
-    transform: translateY(-3px);
-  }
-  
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .vehicle-specs-detail {
-    margin-bottom: 30px;
-  }
-  
-  .vehicle-specs-detail h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-  }
-  
-  .specs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
-  .spec-item {
-    text-align: center;
-    padding: 15px;
-    background-color: var(--gray-100);
-    border-radius: 8px;
-  }
-  
-  .spec-icon {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .spec-name {
-    font-size: 0.9rem;
-    color: var(--gray-600);
-    margin-bottom: 5px;
-  }
-  
-  .spec-value {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
-  
-  .vehicle-description {
-    margin-bottom: 30px;
-  }
-  
-  .vehicle-description h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-  }
-  
-  .vehicle-description p {
-    margin-bottom: 15px;
-    color: var(--gray-700);
-  }
-  
-  .reservation-box {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    padding: 25px;
-    border: 1px solid var(--gray-200);
-  }
-  
-  .price-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .price-info .price {
-    font-size: 2rem;
-  }
-  
-  .availability .available {
-    color: #0b6e4f;
-    background-color: #d0f4de;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
-  .date-picker {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .date-field {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .date-field label {
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-    color: var(--gray-600);
-  }
-  
-  .date-field input {
-    padding: 10px;
-    border: 1px solid var(--gray-300);
-    border-radius: 4px;
-    font-family: inherit;
-  }
-  
-  .reservation-total {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
-    margin-bottom: 20px;
-  }
-  
-  .total-price {
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
-  
-  .related-vehicles {
-    padding: 60px 0;
-    background-color: var(--gray-100);
-  }
-  
-  /* Animations */
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Appear animation for elements */
-  .appear {
-    animation: fadeInUp 0.8s forwards;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 992px) {
-    .container {
-      width: 95%;
-    }
-    
-    .vehicle-detail-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .reservation-box {
-      margin-top: 30px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links, .auth-buttons {
-      display: none;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  
-    .navbar.active .nav-links {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      box-shadow: var(--shadow);
-      padding: 20px 0;
-    }
-  
-    .navbar.active .nav-links li {
-      margin: 10px 0;
-    }
-  
-    .navbar.active .auth-buttons {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 0 20px 20px;
-    }
-  
-    .hero-section h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-section p {
-      font-size: 1rem;
-    }
-  
-    .hero-buttons {
-      flex-direction: column;
-    }
-  
-    .filter-group {
-      width: 100%;
-    }
-    
-    .reservation-card {
-      grid-template-columns: 1fr;
-    }
-    
-    .reservation-image {
-      height: 200px;
-    }
-    
-    .tabs-header {
-      flex-direction: column;
-    }
-    
-    .subscription-grid, .profile-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .specs-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .date-picker {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .hero-section h1 {
-      font-size: 2rem;
-    }
-  
-    .vehicles-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .plans-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .plan-card.featured {
-      transform: none;
-    }
-    
-    .thumbnail-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .specs-grid {
-      grid-template-columns: 1fr;
-    }
   }
   
