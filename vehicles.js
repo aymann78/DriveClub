@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Mazda MX‑5 Miata',
         year: '2022',
         category: 'Convertible Deportivo',
-        image: 'https://images.unsplash.com/photo-1600706932019-1ebdb9ec8bf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
+        image: 'https://media.ed.edmunds-media.com/mazda/hero/mazda_hero_502_1600.jpg',
         specs: {
           power: '181 CV',
           acceleration: '6.5s',
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Toyota GR86',
         year: '2022',
         category: 'Coupé Deportivo',
-        image: 'https://images.unsplash.com/photo-1662483578623-3e5715e1110b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://ddztmb1ahc6o7.cloudfront.net/gatewaytoyota/wp-content/uploads/2022/03/07145249/2022_GR86_Base_TruenoBlue_021_mid.jpg',
         specs: {
           power: '228 CV',
           acceleration: '6.1s',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Subaru BRZ',
         year: '2022',
         category: 'Coupé Deportivo',
-        image: 'https://images.unsplash.com/photo-1626055652669-8114e51dbd07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://ecoloauto.com/wp-content/uploads/2022-Subaru-BRZ-Sport-tech-01-MD.jpg',
         specs: {
           power: '228 CV',
           acceleration: '6.2s',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Fiat 124 Spider',
         year: '2019',
         category: 'Convertible Deportivo',
-        image: 'https://images.unsplash.com/photo-1604048548736-0c451ba84347?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/abarth-124-spider-monza-my19-1200x800-(19).jpg',
         specs: {
           power: '164 CV',
           acceleration: '6.8s',
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Nissan 370Z',
         year: '2020',
         category: 'Coupé Deportivo',
-        image: 'https://images.unsplash.com/photo-1588127333419-b9d5c632b4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://www.topgear.es/sites/navi.axelspringer.es/public/media/image/2023/07/nissan-370z-3080192.jpg',
         specs: {
           power: '332 CV',
           acceleration: '5.2s',
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'BMW Z4',
         year: '2021',
         category: 'Convertible Deportivo',
-        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://mediapool.bmwgroup.com/cache/P9/202209/P90479446/P90479446-bmw-z4-m40i-09-2022-600px.jpg',
         specs: {
           power: '255 CV',
           acceleration: '5.4s',
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Honda Civic Type R',
         year: '2022',
         category: 'Hatchback Deportivo',
-        image: 'https://images.unsplash.com/photo-1621707018053-ad8aaf733bd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://wieck-honda-production.s3.amazonaws.com/photos/aaf14fc8ae21ef4a43b40394791a7089a9be5638/preview-928x522.jpg',
         specs: {
           power: '320 CV',
           acceleration: '5.8s',
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Volkswagen Golf GTI',
         year: '2022',
         category: 'Hatchback Deportivo',
-        image: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://www.cnet.com/a/img/resize/d0e13c91f648afcf4718f486d294c450f5ec3fd0/hub/2022/03/30/4d055b2e-d0c6-4858-9208-5818efeeadc3/2022-vw-golf-gti-long-term-009.jpg?auto=webp&width=1200',
         specs: {
           power: '241 CV',
           acceleration: '6.3s',
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Ford Mustang EcoBoost',
         year: '2021',
         category: 'Coupé Deportivo',
-        image: 'https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/review/hero_image/2021-Ford-Mustang-GT-auto=green-coupe-peter-anderson-1001x565-(1).jpg',
         specs: {
           power: '310 CV',
           acceleration: '5.5s',
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Hyundai Veloster N',
         year: '2022',
         category: 'Hatchback Deportivo',
-        image: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://www.cnet.com/a/img/resize/287dfaf309b3fed59f9933c8e5899620c56ea09d/hub/2022/04/19/8da47739-c866-4aff-9be9-1ba2d1b8f9d9/ogi-2022-hyundai-veloster-n-42.jpg?auto=webp&fit=crop&height=675&width=1200',
         specs: {
           power: '275 CV',
           acceleration: '5.6s',
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Lancia Delta HF Integrale',
         year: '1992',
         category: 'Clásico Rally',
-        image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://uncrate.com/p/2017/11/lancia-delt-hf-integrale-evo-1.jpg',
         specs: {
           power: '212 CV',
           acceleration: '5.7s',
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'BMW M240i',
         year: '2022',
         category: 'Coupé Performance',
-        image: 'https://images.unsplash.com/photo-1615394610149-66997a86e1e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://images.turo.com/media/vehicle/images/DKr8lDXBTqivYrTTQhPbwA.jpg',
         specs: {
           power: '382 CV',
           acceleration: '4.3s',
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Audi S3',
         year: '2022',
         category: 'Compact Performance',
-        image: 'https://images.unsplash.com/photo-1631286040708-eea38a1b2dd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://images.carexpert.com.au/resize/3000/-/app/uploads/2022/08/2022-Audi-S3-Sportback-HERO-2.jpg',
         specs: {
           power: '306 CV',
           acceleration: '4.8s',
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Porsche 718 Cayman',
         year: '2022',
         category: 'Sports Coupé',
-        image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://news.dupontregistry.com/wp-content/uploads/2022/09/cayman-t-1.jpg',
         specs: {
           power: '300 CV',
           acceleration: '4.9s',
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Subaru WRX STI',
         year: '2022',
         category: 'Sports Sedan',
-        image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://static1.topspeedimages.com/wordpress/wp-content/uploads/jpg/201701/2018-subaru-wrx-sti-6.jpg',
         specs: {
           power: '310 CV',
           acceleration: '5.2s',
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Porsche 992 GT3 Touring',
         year: '2023',
         category: 'Superdeportivo',
-        image: 'https://images.unsplash.com/photo-1626544827763-d516dce335e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://richmonds.com.au/wp-content/uploads/2024/02/Porsche-992-GT3-Silver-3.jpg',
         specs: {
           power: '510 CV',
           acceleration: '3.4s',
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'McLaren 570S',
         year: '2021',
         category: 'Superdeportivo',
-        image: 'https://images.unsplash.com/photo-1621610086679-e2807a73bee7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://www.charlottemclaren.com/wp-content/uploads/2018/11/MCLAREN-570S.jpg',
         specs: {
           power: '570 CV',
           acceleration: '3.2s',
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Nissan GT-R Nismo',
         year: '2022',
         category: 'Superdeportivo',
-        image: 'https://images.unsplash.com/photo-1633106384764-46f3b9fca6c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        image: 'https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-07.jpg',
         specs: {
           power: '600 CV',
           acceleration: '2.5s',
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Aston Martin Vantage',
         year: '2020',
         category: 'GT Deportivo',
-        image: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80',
+        image: 'https://www.motortrend.com/uploads/sites/11/2020/07/2020-Aston-Martin-Vantage-front-three-quarter-1.jpg',
         specs: {
           power: '503 CV',
           acceleration: '3.6s',
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="vehicle-plan plan-${plan}">${plan.charAt(0).toUpperCase() + plan.slice(1)}</div>
         </div>
         <div class="vehicle-details">
-          <h3 class="vehicle-name">${vehicle.name} - ${vehicle.year}</h3>
+          <h3 class="vehicle-name">${vehicle.name} <br> ${vehicle.year}</h3>
           <p class="vehicle-category">${vehicle.category}</p>
           <div class="vehicle-specs">
             <div class="spec">
