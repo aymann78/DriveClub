@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehículos | DriveClub - Alquiler de Coches por Suscripción</title>
+    <meta name="description" content="Explora nuestra flota de vehículos disponibles para suscripción" />
+    <meta name="author" content="DriveClub" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+              <h2 class="logo-text">
+                <span class="drive">Drive</span><span class="club">Club</span>
+              </h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/public/vehiculos.html">Vehículos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/public/planes.html">Planes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/public/mi-cuenta.html">Mi Cuenta</a>
+                </li>
+              </ul>
+              <div class="header-actions">
+                <a href="/public/login.html" class="btn btn-outline-secondary">Iniciar Sesión</a>
+                <a href="/public/login.html?registro=true" class="btn btn-primary">Registrarse</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Vehicles Banner -->
+      <section class="vehicles-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h1>Nuestra Flota de Vehículos</h1>
+              <p class="lead">Descubre y elige entre nuestra selección de vehículos premium para tu próxima experiencia de conducción.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section py-4">
+        <div class="container">
+          <div class="filter-container">
+            <div class="row g-3">
+              <div class="col-lg-3 col-md-6">
+                <div class="filter-group">
+                  <label for="categoryFilter" class="form-label">Categoría</label>
+                  <select class="form-select" id="categoryFilter">
+                    <option value="">Todas las categorías</option>
+                    <option value="deportivo">Deportivo</option>
+                    <option value="suv">SUV</option>
+                    <option value="compacto">Compacto</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="lujo">Lujo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="filter-group">
+                  <label for="brandFilter" class="form-label">Marca</label>
+                  <select class="form-select" id="brandFilter">
+                    <option value="">Todas las marcas</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="tesla">Tesla</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="filter-group">
+                  <label for="planFilter" class="form-label">Plan</label>
+                  <select class="form-select" id="planFilter">
+                    <option value="">Todos los planes</option>
+                    <option value="basico">Básico</option>
+                    <option value="premium">Premium</option>
+                    <option value="elite">Elite</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 d-flex align-items-end">
+                <button class="btn btn-primary w-100" id="applyFilters">Aplicar Filtros</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Error Message -->
+      <div class="container mb-4" id="filterErrorContainer" style="display: none;">
+        <div class="alert alert-warning" role="alert">
+          <i class="bi bi-exclamation-triangle me-2"></i>
+          <span id="filterErrorMessage">No se encontraron vehículos que coincidan con los criterios seleccionados.</span>
+        </div>
+      </div>
+
+      <!-- Vehicles Grid -->
+      <section class="vehicles-grid py-5">
+        <div class="container">
+          <div class="row g-4" id="vehiclesContainer">
+            <!-- Vehicle cards will be dynamically inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <h2 class="mb-3">
+                <a href="/" class="footer-logo"><span class="drive" style="color: white; ">Drive</span><span class="club" style="color: var(--primary-color);">Club</span></h2></a>
+              <p>La mejor experiencia en alquiler de vehículos por suscripción. Disfruta de la libertad de conducir sin compromisos.</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <h5>Enlaces</h5>
+              <ul class="footer-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/public/vehiculos.html">Vehículos</a></li>
+                <li><a href="/public/planes.html">Planes</a></li>
+                <li><a href="/public/mi-cuenta.html">Mi Cuenta</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <h5>Información</h5>
+              <ul class="footer-links">
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <h5>Políticas</h5>
+              <ul class="footer-links">
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-12 col-6">
+              <h5>Contacto</h5>
+              <ul class="footer-links">
+                <li><i class="bi bi-geo-alt"></i> Calle Principal 123, Madrid</li>
+                <li><i class="bi bi-telephone"></i> +34 91 123 45 67</li>
+                <li><i class="bi bi-envelope"></i> info@driveclub.es</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="mt-4 mb-3">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-0">© 2023 DriveClub. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <p class="mb-0">Diseñado con <i class="bi bi-heart-fill text-primary"></i> por DriveClub</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/vehicles.js"></script>
+    <script src="/src/js/screen.js"></script>
+  </body>
+</html>
